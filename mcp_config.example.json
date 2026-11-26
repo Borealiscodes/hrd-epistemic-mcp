@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "hrd-epistemic-mcp": {
+      "command": "python3",
+      "args": ["-m", "hrd_mcp.mcp_server"],
+      "env": {
+        "PYTHONPATH": "."
+      }
+    }
+  }
+}
