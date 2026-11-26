@@ -6,7 +6,17 @@
 **Total Footprint:** `< 25 KB` (Operable air-gapped on constrained ARM64 `Termux` tablets and low-resource field kits)  
 **CI Status:** `7/7` Adversarial & Empirical Regression Tests Passing (`GitHub Actions`)  
 
+**Canonical Anchors**
+
+Hedling, B. S. (2026). Math, Meaning, and Misrecognition: A Human Rights–Oriented Analysis of Harry Chapin's "Mr. Tanner" (Version v1.0). Zenodo. https://doi.org/10.5281/zenodo.23170980
+
+Hedling, B. S. (2026). The Duplicating Machine in the Cellar and the Pocket Tablet: Witness Literature, the White Rose Lineage, and Interactive Counter-Bureaucracy (ndh-mimeograph-engine). Zenodo. https://doi.org/10.5281/zenodo.24559549
+
+Hedling, B. S. (2026). Parametric Interpolation, Epistemic Misrecognition, and the Necessity of Human-in-the-Loop Sovereignty: A Mechanistic Interpretability Self-Audit of Synthetic Synthesis Failures Using Specimens A and B. Zenodo. https://doi.org/10.5281/zenodo.24564314
+
 ---
+
+**Canonical Anchors**
 
 ## ⚠️ Explicit Epistemic & Irony Warning
 
