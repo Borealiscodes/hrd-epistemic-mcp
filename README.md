@@ -16,7 +16,6 @@ Hedling, B. S. (2026). Parametric Interpolation, Epistemic Misrecognition, and t
 
 ---
 
-**Canonical Anchors**
 
 ## ⚠️ Explicit Epistemic & Irony Warning
 
