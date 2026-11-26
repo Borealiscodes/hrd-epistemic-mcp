@@ -72,7 +72,7 @@ Because live web portals such as the **UN OHCHR Treaty Body Database** (`tbinter
 * **Zero-Hallucination Lookup:** Any treaty article or case paragraph cited by an LLM must resolve cleanly against the local offline pack or trigger `REFUSE:UNESTABLISHED`.
 
 ### Track B: Concurrent Mimeograph & Artistic Resistance Projects (*Witness Literature*)
-Use code with caution.
+
 Legal briefs alone cannot penetrate public indifference or authoritarian double-speak, whereas international tribunals (ICTY Rule 89(C), IACtHR, ECtHR El-Masri, ICC Ongwen, and the Istanbul Protocol) have long recognized witness literature, personal diaries, and fragmented narrative testimony as vital probative records of systematic persecution. In the lineage of The White Rose (Die Weiße Rose) and our analysis of Harry Chapin’s Mr. Tanner (https://doi.org/10.5281/zenodo.23170980), hrd-epistemic-mcp will serve as the cryptographic custody spine for:
 • ndh-mimeograph-engine: Unifying epistemic-substrate-lab, spherepop-kernel, invariant-logic-engine, ndh-game-dev-kit, and edge-sovereign-audit to turn ungated local models (EleutherAI/pythia-1.4b) into offline witness-literature printing presses (https://doi.org/10.5281/zenodo.24559549).
 • The Unstamped Wake (Playable Maritime Checkpoint & Piper TTS Sea Shanties): An episodic sea voyage across jurisdictions of bureaucratic erasure—combining Q16.16 fixed-point tidal navigation (Triangle-Mutiny / Admiral Yi Sun-sin), calligraphic wind-signaling (Celtic-Shodo-Wind-Odyssey), Papers, Please-style directive puzzles, and offline Piper TTS call-and-response sea shanties (Trauma-Informed-Systems-Design) that make lived experience accessible, memorable, and impossible to stamp VOID.
