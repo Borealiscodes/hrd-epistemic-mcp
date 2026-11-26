@@ -27,30 +27,41 @@ AGENCY_PATTERNS = [
 DOI_REGEX = re.compile(r"\b10\.\d{4,9}/[-._;()/:A-Za-z0-9]+\b")
 
 
-
 def audit_draft_text(draft_text: str, established_identifiers: set[str]) -> dict:
-warnings = []
-for pattern, message in SMOOTHING_PATTERNS:
-if re.search(pattern, draft_text, flags=re.IGNORECASE):
-warnings.append({"category": "NARRATIVE_OR_PROTOCOL_WARNING", "message": message, "pattern": pattern})
-for pattern, message in AGENCY_PATTERNS:
-if re.search(pattern, draft_text, flags=re.IGNORECASE):
-warnings.append({"category": "AGENCY_BOUNDARY_WARNING", "message": message, "pattern": pattern})
-found_dois = set(DOI_REGEX.findall(draft_text))
-unestablished_dois = sorted([d for d in found_dois if d not in established_identifiers])
-for doi in unestablished_dois:
-warnings.append({
-"category": "UNESTABLISHED_IDENTIFIER",
-"message": f"REFUSE:UNESTABLISHED — DOI '{doi}' is not registered in the verified DAG.",
-"identifier": doi,
-})
-disposition = "PASS_WITH_HITL_REVIEW_REQUIRED" if len(warnings) == 0 else "REFUSE_WARNINGS_TRIGGERED"
-return {
-"disposition": disposition,
-"warning_count": len(warnings),
-"warnings": warnings,
-"epistemic_reminder": (
-"Passing automated regex/DAG tripwires does NOT mean a draft is accurate. "
-"Human-in-the-loop verification against primary sources remains mandatory."
-),
-}
+    warnings = []
+
+    for pattern, message in SMOOTHING_PATTERNS:
+        if re.search(pattern, draft_text, flags=re.IGNORECASE):
+            warnings.append({
+                "category": "NARRATIVE_OR_PROTOCOL_WARNING",
+                "message": message,
+                "pattern": pattern,
+            })
+
+    for pattern, message in AGENCY_PATTERNS:
+        if re.search(pattern, draft_text, flags=re.IGNORECASE):
+            warnings.append({
+                "category": "AGENCY_BOUNDARY_WARNING",
+                "message": message,
+                "pattern": pattern,
+            })
+
+    found_dois = set(DOI_REGEX.findall(draft_text))
+    unestablished_dois = sorted([d for d in found_dois if d not in established_identifiers])
+    for doi in unestablished_dois:
+        warnings.append({
+            "category": "UNESTABLISHED_IDENTIFIER",
+            "message": f"REFUSE:UNESTABLISHED — DOI '{doi}' is not registered in the verified DAG.",
+            "identifier": doi,
+        })
+
+    disposition = "PASS_WITH_HITL_REVIEW_REQUIRED" if len(warnings) == 0 else "REFUSE_WARNINGS_TRIGGERED"
+    return {
+        "disposition": disposition,
+        "warning_count": len(warnings),
+        "warnings": warnings,
+        "epistemic_reminder": (
+            "Passing automated regex/DAG tripwires does NOT mean a draft is accurate. "
+            "Human-in-the-loop verification against primary sources remains mandatory."
+        ),
+    }
