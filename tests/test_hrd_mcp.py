@@ -126,7 +126,7 @@ class TestHRDEpistemicMCP(unittest.TestCase):
             },
         })
         self.assertTrue(call_resp["result"]["isError"])
-        payload = json.loads(call_resp["result"]["content"]["text"])
+        payload = json.loads(call_resp["result"]["content"][0]["text"])
         self.assertEqual(payload["reason"], "UNESTABLISHED")
 
 
