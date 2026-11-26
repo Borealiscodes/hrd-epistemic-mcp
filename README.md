@@ -27,7 +27,7 @@ Hedling, B. S. (2026). Parametric Interpolation, Epistemic Misrecognition, and t
 
 ## 1. Mathematical & Mechanistic Rationale: Why Next-Token Predictors Fail in Sensitive Contexts
 
-Autoregressive language models are neither moral witnesses nor legal adjudicators; they are high-dimensional linear and geodesic operators ($h_l \in \mathbb{R}^D$) trained to maximize next-token likelihood. As proven empirically across `v1`–`v9.1.0` of [`Borealiscodes/epistemic-substrate-lab`](https://github.com), deploying unguarded LLMs in human rights documentation or trauma-informed scholarship creates three mathematical failure modes:
+Autoregressive language models are neither moral witnesses nor legal adjudicators; they are high-dimensional linear and geodesic operators ($h_l \in \mathbb{R}^D$) trained to maximize next-token likelihood. As proven empirically across `v1`–`v9.1.0` of [`Borealiscodes/epistemic-substrate-lab`](https://github.com/Borealiscodes/epistemic-substrate-lab), deploying unguarded LLMs in human rights documentation or trauma-informed scholarship creates three mathematical failure modes:
 
 1. **Softmax Simplex Collapse & Confidence Laundering ($\sigma(z) \to \partial \Delta^{V-1}$):**
    Standard softmax probability normalization compresses pre-softmax logits $z \in \mathbb{R}^V$ onto the boundary of the probability simplex. A slight contextual association (such as an unindexed DOI string or missing treaty paragraph) saturates near probability $1.0$, laundering complete parametric ignorance into fluent syntactic certainty. Only pre-softmax centered log-ratios ($\text{clr}(\sigma(z)) \equiv z - \bar{z}$) and hard membership checks against an established hash set prevent fabricated citations.
